@@ -2,29 +2,29 @@
 
 int main (void) {
 
-	int n = 0, pos1, pos2, i, j, m;
+	int n, i, j, pos1, pos2;
+
+	n = 1;
 
 	while (n != EOF) {
 		scanf ("%i", &n);
-		pos1 = 0;
-		pos2 = n-1;
-		for (i = 0; i < n; i++) {
-			if (i == pos2) {
-				printf ("2");
+		for (i = 0, pos1 = 0, pos2 = n-1; i < n; i++) {
+
+			for (j = 0; j < n; j++) {
+				if (j == pos2)
+					printf ("2");
+				else if (j == pos1)
+					printf ("1");
+				else
+					printf ("3");
 			}
-			else if (i == pos1) {
-				printf ("1");
-			}
-			else {
-				printf ("3");
-			}
-			if (i%n == 0) {
-				printf ("\n");
-				pos1++;
-				pos2--;
-				i = 0;
-			}
+
+			pos1++;
+			pos2--;
+			printf ("\n");
 		}
+
+
 	}
 	
 	return 0;
