@@ -2,7 +2,7 @@
 
 int main (void)
 {
-	int i, j;
+	int i, j, k;
 	char op;
 	double m[12][12];
 	double r;
@@ -16,9 +16,9 @@ int main (void)
 	}
 
 	r = 0;
-	for (i = 0; i < 5; i++) {
-		for (j = i + 1; j < 11 - i; j++) {
-			r += m[i][j];
+	for (k = 2, i = 7; i < 12; i++, k+=2) {
+		for (j = i - k; j < i; j++) {
+			r+= m[i][j];
 		}
 	}
 
