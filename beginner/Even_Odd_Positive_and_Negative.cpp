@@ -12,19 +12,35 @@ int main (void)
 	
 	if (a != 0)
 		if (a > 0) pos++;
-		else neg++;
+		else {
+			neg++;
+			a *= -1;
+		}
 	if (b != 0)
 		if (b > 0) pos++;
-		else neg++;
+		else {
+			neg++;
+			b *= -1;
+		}
 	if (c != 0)
 		if (c > 0) pos++;
-		else neg++;
+		else {
+			neg++;
+			c *= -1;
+		}
 	if (d != 0)
 		if (d > 0) pos++;
-		else neg++;
+		else {
+			neg++;
+			d *= -1;
+		}
 	if (e != 0)
 		if (e > 0) pos++;
-		else neg++;
+		else {
+			neg++;
+			e *= -1;
+		}
+
 
 	if (a%2 == 0) par++;
 	else impar++;
@@ -39,8 +55,8 @@ int main (void)
 
 	printf ("%i valor(es) par(es)\n", par);
 	printf ("%i valor(es) impar(es)\n", impar);
-	printf ("%i valor(es) positivos(s)\n", pos);
-	printf ("%i valor(es) negativos(s)\n", neg);
+	printf ("%i valor(es) positivo(s)\n", pos);
+	printf ("%i valor(es) negativo(s)\n", neg);
 
 	return 0;
 }
