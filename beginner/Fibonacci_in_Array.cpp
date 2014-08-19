@@ -2,25 +2,24 @@
 
 int main (void)
 {
-	unsigned long int a, b, m;
+	unsigned long int a, b, f[61];
 	int i, j, n;
 
+	a = 0;
+	b = 1;
+
+	for (i = 0; i < 61; i++) {
+		f[i] = a;
+		a = b;
+		b = f[i]+b;
+	}
+	
 	scanf ("%i", &n);
 
 	while (n-->0) {
 
 		scanf ("%i", &i);
-		j = i;
-
-		a = 0;
-		b = 1;
-
-		while (i-->0) {
-			m = a;
-			a = b;
-			b = m+b;
-		}
-		printf ("Fib(%i) = %lu\n", j, a);
+		printf ("Fib(%i) = %lu\n", i, f[i]);
 	}
 
 	return 0;
