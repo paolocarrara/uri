@@ -5,22 +5,16 @@ int main (void)
 {
 	int a, b, p, area, size;
 
-	a = 1;
+	scanf ("%d", &a);
 
 	while (a != 0) {
+		scanf ("%d %d", &b, &p);
 
-		scanf ("%i", &a);
-	
-		if (a != 0) {
-			scanf ("%i %i", &b, &p);
+		area = a*b;
+		size = sqrt(area*(100.0/p));
+		printf ("%d\n", size);
 
-			area = a*b;
-	
-			size = sqrt(area*(100/p*1.0));
-
-			printf ("%i\n", size);
-		}
-
+		scanf ("%d", &a);
 	}
 	
 	return 0;
